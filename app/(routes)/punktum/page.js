@@ -67,8 +67,8 @@ export default function Page() {
 							});
 							publishers.sort((a, b) => b.reads - a.reads);
 							return publishers
-								.map((publisher) => (
-									<tr className=''>
+								.map((publisher, index) => (
+									<tr key={index} className=''>
 										<td className='p-8'>{publisher.name}</td>
 										<td className='p-8'>{formatAmount(publisher.reads)}</td>
 										<td className='p-8'>{publisher.percentage}%</td>
