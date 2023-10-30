@@ -5,12 +5,12 @@ const Footer = () => {
 	const [windowSize, setWindowSize] = useState({});
 	const [operatingSystem, setOperatingSystem] = useState('');
 
-	useEffect(() => {
-		const os = window.navigator.userAgentData.platform;
+	// useEffect(() => {
+	// 	const os = window.navigator.userAgentData.platform;
 
-		
-		setOperatingSystem(os);
-	}, []);
+	// 	console.log(os)
+	// 	setOperatingSystem(os);
+	// }, []);
 
 
 
@@ -33,7 +33,7 @@ const Footer = () => {
 				Joachim Demuth
 			</div>
 			<div className='flex flex-1 justify-center items-end flex-col'>
-				{operatingSystem && <p>{operatingSystem}</p>}
+				{/* {operatingSystem && <p>{operatingSystem}</p>} */}
 				{operatingSystem && <p>{windowSize.width + 'x' + windowSize.height}</p>}
 			</div>
 		</div>
