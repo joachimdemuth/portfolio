@@ -6,63 +6,63 @@
   font-family: 'TASA Orbiter Display Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Display Regular'), url('./_assets/_fonts/TASAOrbiterDisplay-Regular.woff') format('woff');
+  src: local('TASA Orbiter Display Regular'), url('/assets/_fonts/TASAOrbiterDisplay-Regular.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Display Medium';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Display Medium'), url('./_assets/_fonts/TASAOrbiterDisplay-Medium.woff') format('woff');
+  src: local('TASA Orbiter Display Medium'), url('/assets/_fonts/TASAOrbiterDisplay-Medium.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Display SemiBold';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Display SemiBold'), url('./_assets/_fonts/TASAOrbiterDisplay-SemiBold.woff') format('woff');
+  src: local('TASA Orbiter Display SemiBold'), url('/assets/_fonts/TASAOrbiterDisplay-SemiBold.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Display Bold';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Display Bold'), url('./_assets/_fonts/TASAOrbiterDisplay-Bold.woff') format('woff');
+  src: local('TASA Orbiter Display Bold'), url('/assets/_fonts/TASAOrbiterDisplay-Bold.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Display Black';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Display Black'), url('./_assets/_fonts/TASAOrbiterDisplay-Black.woff') format('woff');
+  src: local('TASA Orbiter Display Black'), url('/assets/_fonts/TASAOrbiterDisplay-Black.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Text Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Text Regular'), url('./_assets/_fonts/TASAOrbiterText-Regular.woff') format('woff');
+  src: local('TASA Orbiter Text Regular'), url('/assets/_fonts/TASAOrbiterText-Regular.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Text Medium';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Text Medium'), url('./_assets/_fonts/TASAOrbiterText-Medium.woff') format('woff');
+  src: local('TASA Orbiter Text Medium'), url('/assets/_fonts/TASAOrbiterText-Medium.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Text SemiBold';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Text SemiBold'), url('./_assets/_fonts/TASAOrbiterText-Semibold.woff') format('woff');
+  src: local('TASA Orbiter Text SemiBold'), url('/assets/_fonts/TASAOrbiterText-Semibold.woff') format('woff');
   }
   
   @font-face {
   font-family: 'TASA Orbiter Text Bold';
   font-style: normal;
   font-weight: normal;
-  src: local('TASA Orbiter Text Bold'), url('./_assets/_fonts/TASAOrbiterText-Bold.woff') format('woff');
+  src: local('TASA Orbiter Text Bold'), url('/assets/_fonts/TASAOrbiterText-Bold.woff') format('woff');
   }
 
 
