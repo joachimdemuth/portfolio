@@ -132,7 +132,7 @@ export default function Page({ params }) {
 								/>
 							)}
 
-							<div className='flex w-full py-4 max-sm:px-4 justify-between items-center'>
+							<div className={`flex w-full py-4 max-sm:px-4 ${images.length > 1 ? "justify-between": "justify-center"}  items-center`}>
 								{images.length > 1 && (
 									<motion.div
 										whileHover={{ scale: 1.1 }}
@@ -157,7 +157,7 @@ export default function Page({ params }) {
 										</svg>
 									</motion.div>
 								)}
-								<p className='text-sm text-accent'>
+								<p className=' font-text text-sm text-accent'>
 									{currentImage + 1}/{images.length}
 								</p>
 								{images.length > 1 && (

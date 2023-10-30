@@ -27,36 +27,21 @@ module.exports = {
 
 			},
 		},
-		fontFamily: {
-			'display-regular': [
-				'TASA Orbiter Display Regular',
-				'system-ui',
-				'sans-serif',
-			],
-			'display-medium': [
-				'TASA Orbiter Display Medium',
-				'system-ui',
-				'sans-serif',
-			],
-			'display-semibold': [
-				'TASA Orbiter Display SemiBold',
-				'system-ui',
-				'sans-serif',
-			],
-			'display-bold': ['TASA Orbiter Display Bold', 'system-ui', 'sans-serif'],
-			'display-black': [
-				'TASA Orbiter Display Black',
-				'system-ui',
-				'sans-serif',
-			],
-			'text-regular': ['TASA Orbiter Text Regular', 'system-ui', 'sans-serif'],
-			'text-medium': ['TASA Orbiter Text Medium', 'system-ui', 'sans-serif'],
-			'text-semibold': [
-				'TASA Orbiter Text SemiBold',
-				'system-ui',
-				'sans-serif',
-			],
-			'text-bold': ['TASA Orbiter Text Bold', 'system-ui', 'sans-serif'],
+		extend: {
+
+			fontFamily: {
+				'display': [
+					'var(--display)',
+					'system-ui',
+					'sans-serif',
+				],
+				'text': [
+					'var(--text)',
+					'system-ui',
+					'sans-serif',
+				],
+				
+			},
 		},
 	},
 	plugins: [],

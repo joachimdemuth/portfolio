@@ -1,5 +1,17 @@
 import ThemeProvider from './_contexts/theme-provider';
+import localFont from 'next/font/local'
 import './globals.css';
+
+const text = localFont({
+	src: './_assets/_fonts/TASAExplorerVF.woff2',
+	display: 'swap',
+	variable: 'text',
+})
+const display = localFont({
+	src: './_assets/_fonts/TASAOrbiterVF.woff2',
+	display: 'swap',
+	variable: 'display',
+})
 
 
 export default function RootLayout({ children }) {
