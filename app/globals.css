@@ -1,27 +1,105 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: 'TASA Orbiter Display Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Display Regular'), url('./_assets/_fonts/TASAOrbiterDisplay-Regular.woff') format('woff');
   }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Display Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Display Medium'), url('./_assets/_fonts/TASAOrbiterDisplay-Medium.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Display SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Display SemiBold'), url('./_assets/_fonts/TASAOrbiterDisplay-SemiBold.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Display Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Display Bold'), url('./_assets/_fonts/TASAOrbiterDisplay-Bold.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Display Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Display Black'), url('./_assets/_fonts/TASAOrbiterDisplay-Black.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Text Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Text Regular'), url('./_assets/_fonts/TASAOrbiterText-Regular.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Text Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Text Medium'), url('./_assets/_fonts/TASAOrbiterText-Medium.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Text SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Text SemiBold'), url('./_assets/_fonts/TASAOrbiterText-Semibold.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'TASA Orbiter Text Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TASA Orbiter Text Bold'), url('./_assets/_fonts/TASAOrbiterText-Bold.woff') format('woff');
+  }
+
+
+
+#root {
+  min-width: 100vw;
+	min-height: 100vh;
 }
+:root{
+  /* COLORS */
+  --accent-color: #FF6B00;
+
+
+  /* PADDING */
+  --body-padding: 24px;
+  --body-padding-mobile: 16px;
+
+  /* SPACING */
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 40px;
+  --spacing-6: 48px;
+
+
+
+}
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding-top: env(safe-area-inset-top);
+	padding-bottom: env(safe-area-inset-bottom);
+  margin: 0;
+  font-family: 'TASA Explorer', sans-serif;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
 }
