@@ -8,6 +8,7 @@ export const ThemeContext = createContext()
 
 export default function ThemeProvider({ children }) {
     const [isDarkMode, setIsDarkMode] = useState(() => {
+        if (typeof window === 'undefined') return false;
         const theme = localStorage.getItem('theme');
         return theme === 'dark';
     });
