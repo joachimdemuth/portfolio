@@ -10,9 +10,6 @@
 	min-height: 100vh;
 }
 :root{
-  /* COLORS */
-  --accent-color: #FF6B00;
-
 
   /* PADDING */
   --body-padding: 24px;

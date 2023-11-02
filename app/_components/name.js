@@ -3,6 +3,8 @@ import { ThemeContext } from '../_contexts/theme-provider';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+
+
 const pathVariants = {
 	hidden: {
 		opacity: 0,

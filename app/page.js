@@ -11,9 +11,9 @@ import { motion } from 'framer-motion';
 export default function Home() {
 	return (
 		<div className='flex flex-col w-full min-h-screen relative'>
-			<div className='flex flex-col flex-1 justify-start items-center gap-4 min-w-full bg-pure-white dark:bg-dark-black p-4 md:p-6'>
+			<div className='flex flex-col flex-1 justify-start items-center gap-4 min-w-full bg-bg dark:bg-dark-bg p-4 md:p-6'>
 				<Name />
-				<div className='flex w-full bg-accent h-[1px]'></div>
+				<div className='flex w-full bg-accent dark:bg-dark-accent h-[1px]'></div>
 				<Navbar />
 				<div className='relative grid md:grid-cols-2 lg:grid-cols-4 w-full justify-between gap-6 gap-y-10'>
 			
@@ -23,6 +23,7 @@ export default function Home() {
 						className='flex flex-grow'
 						href={`/project/${project.slug}`}
 						>
+							
 							<ProjectItem key={project.id} project={project} />
 						</Link>
 					))}

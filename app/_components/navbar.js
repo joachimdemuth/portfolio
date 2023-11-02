@@ -93,14 +93,14 @@ export default function Navbar() {
 		}
 	}, [isOpen]);
 
-	const accents = [
-		'#FF6B00',
-		'#a6ff00',
-		'#00ddff',
-		'#dc89ff',
-		'#00ff55',
-		'#eaff00',
-	];
+	// const accents = [
+	// 	'#FF6B00',
+	// 	'#a6ff00',
+	// 	'#00ddff',
+	// 	'#dc89ff',
+	// 	'#00ff55',
+	// 	'#eaff00',
+	// ];
 	const pathname = usePathname();
 
 	// const handleAccentChange = () => {
@@ -118,7 +118,7 @@ export default function Navbar() {
 		<div className='navbar flex relative overflow-visible w-full text-sm font-text-regular leading-4 gap-6 mb-12 items-center'>
 			{/* {!isOpen && ( */}
 				<div className='flex flex-1'>
-					<div className='md:flex md:flex-1 hidden text-accent'>
+					<div className='md:flex md:flex-1 hidden text-accent dark:text-dark-accent font-display'>
 						Design Engineer
 					</div>
 
@@ -126,7 +126,7 @@ export default function Navbar() {
 						<Link href='/about'>
 							<div
 								className={`flex flex-1 ${
-									pathname === '/about' ? 'text-accent' : 'text-grey'
+									pathname === '/about' ? 'text-accent' : 'text-tertiary-text'
 								} hover:text-accent hover:cursor-pointer`}
 							>
 								About
@@ -136,13 +136,13 @@ export default function Navbar() {
 							className={`flex flex-1 ${
 								pathname === '/' || pathname.startsWith('/project/')
 									? 'text-accent'
-									: 'text-grey'
+									: 'text-tertiary-text'
 							} hover:text-accent hover:cursor-pointer`}
 						>
 							<Link href='/'>Work</Link>
 						</div>
 					</div>
-					<div className='md:flex md:flex-1 hidden text-grey '>
+					<div className='md:flex md:flex-1 hidden text-secondary-text dark:text-dark-secondary-text '>
 						<div className='flex flex-1 gap-1 items-center'>
 							<p>Dark mode</p>
 							<Switch />
@@ -176,20 +176,20 @@ export default function Navbar() {
 						initial='hidden'
 						exit='exit'
 						className={`absolute flex p-4 gap-6 rounded-lg flex-col top-0 right-0 w-0
-					h-20  flex-1 bg-light-grey dark:bg-dark-light-black text-sm z-30 transition-all duration-500 ease-in-out overflow-hidden`}
+					h-20  flex-1 bg-tertiary-text dark:bg-dark-tertiary-text text-sm z-30 transition-all duration-500 ease-in-out overflow-hidden`}
 					>
 						<motion.div
 							variants={childrenVariants}
 							className=' flex flex-col w-full gap-2'
 						>
 							<div className='flex w-full flex-row justify-between'>
-								<div className='text-off-black dark:text-light-grey text-sm'>
+								<div className='text-primary-text dark:text-dark-light-grey text-sm'>
 									Settings
 								</div>
 
 								<div
 									onClick={() => handleBurgerClick()}
-									className='flex md:hidden rounded-full justify-center items-center gap-1 flex-colw-[24px] h-[24px] hover:cursor-pointer'
+									className='flex md:hidden rounded-full justify-center items-center gap-1 flex-col w-[24px] h-[24px] hover:cursor-pointer'
 								>
 									<div className='w-[12px] h-[1px] bg-off-black dark:bg-lightest-grey'></div>
 								</div>
@@ -209,25 +209,25 @@ export default function Navbar() {
 							variants={childrenVariants}
 							className=' flex flex-col w-full gap-2 '
 						>
-							<div className='text-off-black dark:text-light-grey text-sm'>
+							<div className='text-primary-text dark:text-dark-primary-text text-sm'>
 								Contact
 							</div>
 							<div className='flex flex-col w-full gap-2'>
 								<div className='flex w-full flex-row justify-between'>
 									<div className='flex flex-1'>
-										<p className='text-darker-grey'>M</p>
+										<p className='text-secondary-text dark:textdark-secondary-text '>M</p>
 									</div>
 									<div className='flex flex-1'>
-										<a href='mailto:jde@maybetomorrow.dk'>
-											<p className='text-grey dark:text-darker-grey hover:text-accent'>
-												jde@maybetomorrow.dk
+										<a href='mailto:jdemuth18@gmail.com'>
+											<p className='text-secondary-text dark:textdark-secondary-text hover:text-accent dark:hover:text-dark-accent'>
+												jdemuth18@gmail.com
 											</p>
 										</a>
 									</div>
 								</div>
 								<div className='flex w-full flex-row justify-between'>
 									<div className='flex flex-1'>
-										<p className='text-darker-grey'>IG</p>
+										<p className='text-secondary-text dark:textdark-secondary-text'>IG</p>
 									</div>
 									<div className='flex flex-1'>
 										<a
@@ -235,7 +235,7 @@ export default function Navbar() {
 											target='_blank'
 											rel='noopener noreferrer'
 										>
-											<p className='text-grey hover:text-accent dark:text-darker-grey'>
+											<p className='text-secondary-text dark:textdark-secondary-text hover:text-accent'>
 												_joachimdemuth
 											</p>
 										</a>

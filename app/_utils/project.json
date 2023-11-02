@@ -18,7 +18,7 @@
 			"Swagger"
 		],
 		"url": "",
-		"coverImage": "/assets/instruks/cover.jpg",
+		"coverImage": "/assets/instruks/cover_2.jpg",
 		"imageUrls": ["/assets/instruks/instruks.jpg", "/assets/instruks/instruks_2.jpg", "/assets/instruks/instruks_3.jpg"]
 	},
 	{
@@ -49,7 +49,7 @@
 		"services": ["UI Design", "UX Design"],
 		"platforms": ["Figma"],
 		"url": "",
-		"coverImage": "/assets/dc/cover.png",
+		"coverImage": "/assets/dc/cover.jpg",
 		"imageUrls": ["/assets/dc/dc_1.jpg", "/assets/dc/dc_2.jpg", "/assets/dc/dc_3.mp4", "/assets/dc/dc_4.mp4", "/assets/dc/dc_5.mp4", "/assets/dc/DC.mp4"]
 	},
 	{
@@ -64,23 +64,23 @@
 		"services": ["UI Design", "Frontend Development"],
 		"platforms": ["Figma", "Framer", "React"],
 		"url": "https://www.agoprene.com",
-		"coverImage": "/assets/agoprene/ago_web.jpg",
-		"imageUrls": ["/assets/agoprene/ago_1.png","/assets/agoprene/ago_2.jpg"]
+		"coverImage": "/assets/agoprene/cover.jpg",
+		"imageUrls": ["/assets/agoprene/ago_1.png","/assets/agoprene/ago_2.jpg", "/assets/agoprene/ago_web.png"]
 	},
 	{
 		"id": "5",
-		"slug": "ascendis-design-system",
-		"title": "Power Platform Design System",
-		"description": "The client aimed to implement a design system for their MS Power Platform to enhance efficiency and quality in the development processes of new Power Apps. This initiative culminated in a design system that fosters a more consistent and 'on-brand' user experience across applications. Serving as a focal point and guide for developers, the design system aids in building not only functional but also visually appealing applications aligned with the company’s overarching brand identity. Continuous dialogue and stakeholder involvement were integral during the design and implementation phases to ensure the design system operated smoothly and effectively.",
-		"client": "Ascendis Pharma",
-		"year": "2023",
-		"role": ["UI Designer", "UX Designer"],
-		"category": "Design System",
-		"services": ["UI Design", "UX Design", "Design System"],
-		"platforms": ["Figma", "Microsoft Power Platform"],
+		"slug": "onboarding-flow",
+		"title": "Onboarding Flow",
+		"description": "This project focused on designing an onboarding flow for a Telenor's self-service app, aiming to provide a smooth and engaging user experience. The onboarding flow was designed to be introduce the user to the app's features and functionality, after having gone through a redesign.",
+		"client": "Telenor",
+		"year": "2022",
+		"role": ["UI Designer"],
+		"category": "App Design",
+		"services": ["UI Design", "App Design"],
+		"platforms": ["Figma", "Mit Telenor", "iOS"],
 		"url": "",
-		"coverImage": "/assets/ascendis_ds/cover.jpg",
-		"imageUrls": ["/assets/ascendis_ds/ascendis_ds.jpg", "/assets/ascendis_ds/cover.jpg"]
+		"coverImage": "/assets/telenor_onboarding/cover.jpg",
+		"imageUrls": ["/assets/telenor_onboarding/oonboarding.mp4"]
 	},
 	{
 		"id": "6",
@@ -94,7 +94,7 @@
 		"services": ["UI Design", "UX Design", "App Design"],
 		"platforms": ["Figma", "iOS", "Mit Telenor"],
 		"url": "",
-		"coverImage": "/assets/telenor_E&R/cover.png",
+		"coverImage": "/assets/telenor_E&R/cover.jpg",
 		"imageUrls": ["/assets/telenor_E&R/device_details.mp4"]
 
 	},
@@ -140,7 +140,7 @@
 		"services": ["UI Design", "UX Design"],
 		"platforms": ["Figma", "Mit Telenor", "iOS"],
 		"url": "",
-		"coverImage": "/assets/telenor_np/cover.png",
+		"coverImage": "/assets/telenor_np/cover.jpg",
 		"imageUrls": ["/assets/telenor_np/cover.png"]
 	}
 ]

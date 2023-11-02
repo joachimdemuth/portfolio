@@ -27,7 +27,7 @@ const Footer = () => {
 	}, []);
 
 	return (
-		<div className='flex relative items-center w-full px-6 h-12 bg-lightest-grey dark:bg-dark-lightest-grey z-10 text-xs text-grey dark:text-accent'>
+		<div className='flex relative items-center w-full px-6 h-12 bg-footer dark:bg-dark-footer z-10 font-text text-xs text-tertiary-text dark:text-accent'>
 			<div className='flex flex-1 justify-start items-center'>©2023</div>
 			<div className='flex flex-1 justify-center items-center'>
 				Joachim Demuth

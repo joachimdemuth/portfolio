@@ -30,69 +30,69 @@ export default function Page({ params }) {
 
 	return (
 		<div className='flex flex-col w-full min-h-screen overflow-visible'>
-			<div className='flex flex-1 flex-col justify-start items-center overflow-visible gap-4 min-w-full bg-pure-white dark:bg-dark-black p-4 md:p-6'>
+			<div className='flex flex-1 flex-col justify-start items-center overflow-visible gap-4 min-w-full bg-bg dark:bg-dark-bg p-4 md:p-6'>
 				<Name />
-				<div className='flex w-full bg-accent h-[1px]'></div>
+				<div className='flex w-full bg-accent dark:bg-dark-accent h-[1px]'></div>
 
 				<Navbar />
 
-				<div className='flex w-full bg-lightest-grey dark:bg-dark-lightest-grey md:p-6 rounded-[10px] gap-6 flex-col-reverse md:flex-row'>
+				<div className='flex w-full bg-footer dark:bg-dark-footer md:p-6 rounded-[10px] gap-6 flex-col-reverse md:flex-row'>
 					<div className='flex w-full md:w-1/2 max-sm:px-4'>
 						{post && (
 							<div className='flex w-full flex-col'>
-								<div className='flex w-full flex-col font-display-regular text-sm border-b-[1px] border-light-grey dark:border-darker-grey pb-10 gap-2'>
-									<p className='text-accent'>{post.title}</p>
-									<p className='text-darker-grey dark:text-grey '>
+								<div className='flex w-full flex-col font-display text-sm border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text pb-10 gap-2'>
+									<p className='text-accent dark:text-dark-accent'>{post.title}</p>
+									<p className='text-tertiary-text dark:text-dark-tertiary-text '>
 										{post.description}
 									</p>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-light-grey dark:border-darker-grey text-sm'>
-									<div className='flex flex-1 text-darker-grey dark:text-grey'>
+								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Client
 									</div>
 									<div className='flex flex-1 text-accent'>{post.client}</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-light-grey dark:border-darker-grey text-sm'>
-									<div className='flex flex-1 text-darker-grey dark:text-grey'>
+								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Year
 									</div>
-									<div className='flex flex-1 text-grey dark:text-darker-grey'>
+									<div className='flex flex-1 text-tertiary-text dark:text-dark-tertiary-text'>
 										{post.year}
 									</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-light-grey dark:border-darker-grey text-sm'>
-									<div className='flex flex-1 text-darker-grey dark:text-grey'>
+								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Role
 									</div>
-									<div className='flex flex-1 flex-col text-grey dark:text-darker-grey'>
+									<div className='flex flex-1 flex-col text-tertiary-text dark:text-dark-tertiary-text'>
 										{post.role.map((r) => (
 											<p key={r}>{r}</p>
 										))}
 									</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-light-grey dark:border-darker-grey text-sm'>
-									<div className='flex flex-1 text-darker-grey dark:text-grey'>
+								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Service
 									</div>
-									<div className='flex flex-1 text-grey dark:text-darker-grey flex-col'>
+									<div className='flex flex-1 text-tertiary-text dark:text-dark-tertiary-text flex-col'>
 										{post.services.map((service) => (
 											<p key={service}>{service}</p>
 										))}
 									</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-light-grey dark:border-darker-grey text-sm'>
-									<div className='flex flex-1 text-darker-grey dark:text-grey'>
+								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Platforms
 									</div>
-									<div className='flex flex-1 flex-col text-grey dark:text-darker-grey'>
+									<div className='flex flex-1 flex-col text-tertiary-text dark:text-dark-tertiary-text'>
 										{post.platforms.map((platform) => (
 											<p key={platform}>{platform}</p>
 										))}
 									</div>
 								</div>
 								{post.url && (
-									<div className='flex w-full flex-row py-2 border-b-[1px] border-light-grey dark:border-darker-grey text-sm'>
-										<div className='flex flex-1 text-darker-grey dark:text-grey'>
+									<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+										<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 											URL
 										</div>
 										<Link
@@ -102,8 +102,8 @@ export default function Page({ params }) {
 											rel='noopener noreferrer'
 										>
 											<motion.div
-												whileHover={{ x: 10, color: 'var(--accent-color)' }}
-												className='flex flex-1 text-grey dark:text-darker-grey'
+												whileHover={{ x: 10, color: '#FF6B00' }}
+												className='flex flex-1 text-tertiary-text dark:text-dark-tertiary-text'
 											>
 												{post.url}
 											</motion.div>
@@ -132,14 +132,14 @@ export default function Page({ params }) {
 								/>
 							)}
 
-							<div className={`flex w-full py-4 max-sm:px-4 ${images.length > 1 ? "justify-between": "justify-center"}  items-center`}>
 								{images.length > 1 && (
+							<div className={`flex w-full py-4 max-sm:px-4 ${images.length > 1 ? "justify-between": "justify-center"}  items-center`}>
 									<motion.div
 										whileHover={{ scale: 1.1 }}
 										whileTap={{ scale: 0.9 }}
 										transition={{ duration: 0.2 }}
 										onClick={handleImageChange}
-										className=' w-[56px] flex justify-center items-center h-[40px] rounded-2xl bg-accent bg-opacity-80 backdrop-blur-md hover:cursor-pointer'
+										className=' w-[56px] flex justify-center items-center h-[40px] rounded-2xl bg-accent dark:bg-dark-accent bg-opacity-80 backdrop-blur-md hover:cursor-pointer'
 									>
 										<svg
 											width='24'
@@ -156,17 +156,17 @@ export default function Page({ params }) {
 											/>
 										</svg>
 									</motion.div>
-								)}
-								<p className=' font-text text-sm text-accent'>
+
+								<p className=' font-text text-sm text-accent dark:text-dark-accent'>
 									{currentImage + 1}/{images.length}
 								</p>
-								{images.length > 1 && (
+
 									<motion.div
 										whileHover={{ scale: 1.1 }}
 										whileTap={{ scale: 0.9 }}
 										transition={{ duration: 0.2 }}
 										onClick={handleImageChange}
-										className='w-[56px] flex justify-center items-center h-[40px] rounded-2xl bg-accent bg-opacity-80 backdrop-blur-md hover:cursor-pointer'
+										className='w-[56px] flex justify-center items-center h-[40px] rounded-2xl bg-accent dark:bg-dark-accent bg-opacity-80 backdrop-blur-md hover:cursor-pointer'
 									>
 										<svg
 											width='24'
@@ -183,8 +183,8 @@ export default function Page({ params }) {
 											/>
 										</svg>
 									</motion.div>
-								)}
 							</div>
+								)}
 						</div>
 					)}
 				</div>
