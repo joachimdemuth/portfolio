@@ -17,14 +17,14 @@ const Switch = () => {
 	return (
 		<div
 			onClick={toggleTheme}
-			className={`flex border-tertiary-text ${
-				isOn ? 'bg-accent' : 'bg-secondary-text'
+			className={`flex border-footer ${
+				isOn ? 'bg-accent' : 'bg-tertiary-text'
 			} w-5 h-3 border ${
 				isOn ? 'justify-end' : 'justify-start'
 			} p-[1px] items-center rounded-full cursor-pointer`}
 		>
 			<div 
-			className={`flex w-2 h-2 bg-tertiary-text rounded-full transition-all duration-200 ease-out`}></div>
+			className={`flex w-2 h-2 bg-footer rounded-full transition-all duration-200 ease-out`}></div>
 		</div>
 	);
 };

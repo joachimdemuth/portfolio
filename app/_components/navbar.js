@@ -158,10 +158,10 @@ export default function Navbar() {
 
 					<div
 						onClick={() => handleBurgerClick()}
-						className='flex md:hidden z-20 rounded-full justify-center items-center gap-1 flex-col bg-light-grey dark:bg-off-black w-[24px] h-[24px] hover:cursor-pointer'
+						className='flex md:hidden z-20 rounded-full justify-center items-center gap-1 flex-col bg-project-item-bg dark:bg-dark-tertiary-text w-[24px] h-[24px] hover:cursor-pointer'
 					>
-						<div className='w-[12px] h-[1px] bg-grey'></div>
-						<div className='w-[12px] h-[1px] bg-grey'></div>
+						<div className='w-[12px] h-[1px] bg-secondary-text dark:bg-dark-secondary-text'></div>
+						<div className='w-[12px] h-[1px] bg-secondary-text dark:bg-dark-secondary-text'></div>
 					</div>
 				</div>
 			{/* )} */}
@@ -176,14 +176,14 @@ export default function Navbar() {
 						initial='hidden'
 						exit='exit'
 						className={`absolute flex p-4 gap-6 rounded-lg flex-col top-0 right-0 w-0
-					h-20  flex-1 bg-tertiary-text dark:bg-dark-tertiary-text text-sm z-30 transition-all duration-500 ease-in-out overflow-hidden`}
+					h-20  flex-1 bg-project-item-bg dark:bg-dark-footer text-sm z-30 transition-all duration-500 ease-in-out overflow-hidden`}
 					>
 						<motion.div
 							variants={childrenVariants}
 							className=' flex flex-col w-full gap-2'
 						>
 							<div className='flex w-full flex-row justify-between'>
-								<div className='text-primary-text dark:text-dark-light-grey text-sm'>
+								<div className='text-primary-text dark:text-dark-primary-text text-sm'>
 									Settings
 								</div>
 
@@ -191,13 +191,13 @@ export default function Navbar() {
 									onClick={() => handleBurgerClick()}
 									className='flex md:hidden rounded-full justify-center items-center gap-1 flex-col w-[24px] h-[24px] hover:cursor-pointer'
 								>
-									<div className='w-[12px] h-[1px] bg-off-black dark:bg-lightest-grey'></div>
+									<div className='w-[12px] h-[1px] bg-primary-text dark:bg-dark-primary-text'></div>
 								</div>
 							</div>
 
 							<div className='flex w-full flex-row justify-between items-center gap-6 border-b-[1px] border-grey pb-10'>
 								<div className='flex w-full'>
-									<p className='text-darker-grey text-sm'>Dark mode</p>
+									<p className='text-secondary-text dark:text-dark-secondary-text text-sm'>Dark mode</p>
 								</div>
 								<div className='flex w-full'>
 									<Switch />
@@ -215,11 +215,11 @@ export default function Navbar() {
 							<div className='flex flex-col w-full gap-2'>
 								<div className='flex w-full flex-row justify-between'>
 									<div className='flex flex-1'>
-										<p className='text-secondary-text dark:textdark-secondary-text '>M</p>
+										<p className='text-secondary-text dark:text-dark-secondary-text '>M</p>
 									</div>
 									<div className='flex flex-1'>
 										<a href='mailto:jdemuth18@gmail.com'>
-											<p className='text-secondary-text dark:textdark-secondary-text hover:text-accent dark:hover:text-dark-accent'>
+											<p className='text-secondary-text dark:text-dark-secondary-text hover:text-accent dark:hover:text-dark-accent'>
 												jdemuth18@gmail.com
 											</p>
 										</a>
@@ -227,7 +227,7 @@ export default function Navbar() {
 								</div>
 								<div className='flex w-full flex-row justify-between'>
 									<div className='flex flex-1'>
-										<p className='text-secondary-text dark:textdark-secondary-text'>IG</p>
+										<p className='text-secondary-text dark:text-dark-secondary-text'>IG</p>
 									</div>
 									<div className='flex flex-1'>
 										<a
@@ -235,7 +235,7 @@ export default function Navbar() {
 											target='_blank'
 											rel='noopener noreferrer'
 										>
-											<p className='text-secondary-text dark:textdark-secondary-text hover:text-accent'>
+											<p className='text-secondary-text dark:text-dark-secondary-text hover:text-accent'>
 												_joachimdemuth
 											</p>
 										</a>
