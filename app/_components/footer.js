@@ -5,14 +5,24 @@ const Footer = () => {
 	const [windowSize, setWindowSize] = useState({});
 	const [operatingSystem, setOperatingSystem] = useState('');
 
-	// useEffect(() => {
-	// 	const os = window.navigator.userAgentData.platform;
+	useEffect(() => {
+		const os = window.navigator.platform;
 
-	// 	console.log(os)
-	// 	setOperatingSystem(os);
-	// }, []);
-
-
+		if(os === 'MacIntel') {
+			setOperatingSystem('macOS');
+		}
+		if(os === 'Win32') {
+			setOperatingSystem('Windows');
+		}
+		if(os === 'Linux x86_64') {
+			setOperatingSystem('Linux');
+		}
+		if(os === 'iPhone') {
+			setOperatingSystem('iOS');
+		} else {
+			setOperatingSystem('Unknown');
+		}
+	}, []);
 
 	useEffect(() => {
 		function handleResize() {
@@ -33,7 +43,7 @@ const Footer = () => {
 				Joachim Demuth
 			</div>
 			<div className='flex flex-1 justify-center items-end flex-col'>
-				{/* {operatingSystem && <p>{operatingSystem}</p>} */}
+				{operatingSystem && <p>{operatingSystem}</p>}
 				{operatingSystem && <p>{windowSize.width + 'x' + windowSize.height}</p>}
 			</div>
 		</div>

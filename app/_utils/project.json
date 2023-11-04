@@ -142,5 +142,22 @@
 		"url": "",
 		"coverImage": "/assets/telenor_np/cover.jpg",
 		"imageUrls": ["/assets/telenor_np/cover.png"]
+	},
+	{
+		"id": "11",
+		"slug": "almost-done",
+		"title": "Almost Done",
+		"description": "In my spare time I like to shoot film photography and I needed a place to show my photos. Therefore, I made a personal gallery with a small CMS, where i can easily upload photos, add metadata, and edit/delete existing photos. The gallery is built with Next.js and Tailwind CSS. The images and the database is hosted on Supabase. The website itself is hosted on Vercel. This side project was a great chance for me to get some experience with working with a database.",
+		"client": "Personal",
+		"year": "2023",
+		"role": ["Designer", "Frontend Developer"],
+		"category": "Developer",
+		"services": ["UI Design", "Frontend Development"],
+		"platforms": ["Next.js", "Tailwind CSS", "Supabase", "Vercel", "React"],
+		"url": "https://almostdone.dk",
+		"coverImage": "/assets/almost-done/cover.jpg",
+		"imageUrls": ["/assets/almost-done/video.mp4"]
 	}
+
+	
 ]
