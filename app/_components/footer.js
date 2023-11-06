@@ -8,7 +8,8 @@ const Footer = () => {
 	useEffect(() => {
 		const os = window.navigator.platform;
 
-		if(os === 'MacIntel') {
+		if(os.includes('MacIntel')) {
+
 			setOperatingSystem('macOS');
 		}
 		if(os === 'Win32') {
@@ -19,9 +20,7 @@ const Footer = () => {
 		}
 		if(os === 'iPhone') {
 			setOperatingSystem('iOS');
-		} else {
-			setOperatingSystem('Unknown');
-		}
+		} 
 	}, []);
 
 	useEffect(() => {
@@ -43,7 +42,7 @@ const Footer = () => {
 				Joachim Demuth
 			</div>
 			<div className='flex flex-1 justify-center items-end flex-col'>
-				{operatingSystem && <p>{operatingSystem}</p>}
+				{operatingSystem ? <p>{operatingSystem}</p> : <p>Unknown</p>}
 				{operatingSystem && <p>{windowSize.width + 'x' + windowSize.height}</p>}
 			</div>
 		</div>

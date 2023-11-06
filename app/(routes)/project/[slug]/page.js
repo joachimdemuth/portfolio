@@ -6,20 +6,35 @@ import Navbar from '../../../_components/navbar';
 import Footer from '../../../_components/footer';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+
+
 
 export default function Page({ params }) {
 	const [post, setPost] = useState(null);
 	const [images, setImages] = useState(null);
 	const [currentImage, setCurrentImage] = useState(0);
+const [hasMounted, setHasMounted] = useState(false);
 
-	useEffect(() => {
-		const foundPost = projectData.find(
-			(project) => project.slug === params.slug,
+
+
+useEffect(() => {
+	const foundPost = projectData.find(
+		(project) => project.slug === params.slug,
 		);
 		setPost(foundPost);
 		setImages(foundPost.imageUrls);
 	}, [params.slug]);
+	
+	useEffect(() => {
 
+		setHasMounted(true);
+	}, []);
+	
+	if (!hasMounted) {
+		return null;
+	}
 	const handleImageChange = () => {
 		if (currentImage === images.length - 1) {
 			setCurrentImage(0);
@@ -27,6 +42,14 @@ export default function Page({ params }) {
 			setCurrentImage(currentImage + 1);
 		}
 	};
+
+	function shuffleArray(array) {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[array[i], array[j]] = [array[j], array[i]];
+		}
+		return array;
+	}
 
 	return (
 		<div className='flex flex-col w-full min-h-screen overflow-visible'>
@@ -41,7 +64,9 @@ export default function Page({ params }) {
 						{post && (
 							<div className='flex w-full flex-col md:pb-12'>
 								<div className='flex w-full flex-col font-display text-sm pb-10 gap-2'>
-									<p className='text-accent dark:text-dark-accent'>{post.title}</p>
+									<p className='text-accent dark:text-dark-accent'>
+										{post.title}
+									</p>
 									<p className='text-tertiary-text dark:text-dark-tertiary-text '>
 										{post.description}
 									</p>
@@ -132,8 +157,12 @@ export default function Page({ params }) {
 								/>
 							)}
 
-								{images.length > 1 && (
-							<div className={`flex w-full py-4 max-sm:px-4 ${images.length > 1 ? "justify-between": "justify-center"}  items-center overflow-visible`}>
+							{images.length > 1 && (
+								<div
+									className={`flex w-full py-4 max-sm:px-4 ${
+										images.length > 1 ? 'justify-between' : 'justify-center'
+									}  items-center overflow-visible`}
+								>
 									<motion.div
 										whileHover={{ scale: 1.1 }}
 										whileTap={{ scale: 0.9 }}
@@ -157,9 +186,9 @@ export default function Page({ params }) {
 										</svg>
 									</motion.div>
 
-								<p className=' font-text text-sm text-accent dark:text-dark-accent'>
-									{currentImage + 1}/{images.length}
-								</p>
+									<p className=' font-text text-sm text-accent dark:text-dark-accent'>
+										{currentImage + 1}/{images.length}
+									</p>
 
 									<motion.div
 										whileHover={{ scale: 1.1 }}
@@ -183,10 +212,42 @@ export default function Page({ params }) {
 											/>
 										</svg>
 									</motion.div>
-							</div>
-								)}
+								</div>
+							)}
 						</div>
 					)}
+				</div>
+				<div className='flex flex-col w-full justify-between gap-6 '>
+					<div className='flex'>
+					<h2 className='font-display text-accent dark:text-dark-accent text-2xl md:text-xl font-bold'>Other projects</h2>
+					</div>
+					<div className='flex w-full flex-col justify-between items-start gap-6 md:flex-row'>
+
+					{shuffleArray([...projectData])
+						.slice(0, 4)
+						.map((project) => (
+							<a href={`/project/${project.slug}`} className="flex w-full" >
+
+							<motion.div 
+
+key={project.id}
+whileHover={{ y: -10 }}
+className='flex w-full flex-col font-display text-sm pb-10 gap-2 cursor-pointer'>
+								<div className='flex justify-start object-cover items-start relative w-full aspect-square h-auto rounded-[10px] overflow-clip'>
+									<Image
+										src={project.coverImage}
+										fill
+										
+										alt={project.title}
+										/>
+								</div>
+								<p className='text-accent dark:text-dark-accent'>
+									{project.title}
+								</p>
+							</motion.div>
+										</a>
+						))}
+						</div>
 				</div>
 			</div>
 			<Footer />

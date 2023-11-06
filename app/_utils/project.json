@@ -80,7 +80,7 @@
 		"platforms": ["Figma", "Mit Telenor", "iOS"],
 		"url": "",
 		"coverImage": "/assets/telenor_onboarding/cover.jpg",
-		"imageUrls": ["/assets/telenor_onboarding/oonboarding.mp4"]
+		"imageUrls": ["/assets/telenor_onboarding/onboarding.mp4"]
 	},
 	{
 		"id": "6",

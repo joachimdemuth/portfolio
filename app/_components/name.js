@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+'use client'
+
+import React, { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../_contexts/theme-provider';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -40,6 +42,16 @@ const Path = (props) => (
 
 export default function Name() {
 	const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+	const [hasMounted, setHasMounted] = useState(false);
+
+	useEffect(() => {
+		setHasMounted(true);
+	}, []);
+
+	if (!hasMounted) {
+		return null;
+	}
+
 
 	return (
 		<div className='name flex w-full gap-2 md:gap-6 '>
