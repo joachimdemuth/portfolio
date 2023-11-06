@@ -36,23 +36,23 @@ export default function Page({ params }) {
 
 				<Navbar />
 
-				<div className='flex w-full bg-footer dark:bg-dark-footer md:p-6 rounded-[10px] gap-6 flex-col-reverse md:flex-row'>
-					<div className='flex w-full md:w-1/2 max-sm:px-4'>
+				<div className='flex w-full bg-footer dark:bg-dark-footer md:p-6 rounded-[10px] gap-6 flex-col-reverse md:flex-row mb-12'>
+					<div className='flex w-full md:w-1/2 max-sm:px-4 pb-4'>
 						{post && (
-							<div className='flex w-full flex-col'>
-								<div className='flex w-full flex-col font-display text-sm border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text pb-10 gap-2'>
+							<div className='flex w-full flex-col md:pb-12'>
+								<div className='flex w-full flex-col font-display text-sm pb-10 gap-2'>
 									<p className='text-accent dark:text-dark-accent'>{post.title}</p>
 									<p className='text-tertiary-text dark:text-dark-tertiary-text '>
 										{post.description}
 									</p>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+								<div className='flex w-full flex-row py-2 border-t-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
 									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Client
 									</div>
 									<div className='flex flex-1 text-accent'>{post.client}</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+								<div className='flex w-full flex-row py-2 border-t-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
 									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Year
 									</div>
@@ -60,7 +60,7 @@ export default function Page({ params }) {
 										{post.year}
 									</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+								<div className='flex w-full flex-row py-2 border-t-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
 									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Role
 									</div>
@@ -70,7 +70,7 @@ export default function Page({ params }) {
 										))}
 									</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+								<div className='flex w-full flex-row py-2 border-t-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
 									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Service
 									</div>
@@ -80,7 +80,7 @@ export default function Page({ params }) {
 										))}
 									</div>
 								</div>
-								<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+								<div className='flex w-full flex-row py-2 border-t-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
 									<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 										Platforms
 									</div>
@@ -91,7 +91,7 @@ export default function Page({ params }) {
 									</div>
 								</div>
 								{post.url && (
-									<div className='flex w-full flex-row py-2 border-b-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
+									<div className='flex w-full flex-row py-2 border-t-[1px] border-tertiary-text dark:border-dark-tertiary-text text-sm'>
 										<div className='flex flex-1 text-secondary-text dark:text-dark-secondary-text'>
 											URL
 										</div>
@@ -114,7 +114,7 @@ export default function Page({ params }) {
 						)}
 					</div>
 					{post && images && (
-						<div className='flex-col relative  flex w-full md:w-1/2 overflow-hidden'>
+						<div className='flex-col relative  flex w-full md:w-1/2 overflow-visible'>
 							{images[currentImage].includes('.mp4') ? (
 								<video
 									className='relative w-full h-full aspect-square object-contain rounded-[2px]'
@@ -133,13 +133,13 @@ export default function Page({ params }) {
 							)}
 
 								{images.length > 1 && (
-							<div className={`flex w-full py-4 max-sm:px-4 ${images.length > 1 ? "justify-between": "justify-center"}  items-center`}>
+							<div className={`flex w-full py-4 max-sm:px-4 ${images.length > 1 ? "justify-between": "justify-center"}  items-center overflow-visible`}>
 									<motion.div
 										whileHover={{ scale: 1.1 }}
 										whileTap={{ scale: 0.9 }}
 										transition={{ duration: 0.2 }}
 										onClick={handleImageChange}
-										className=' w-[56px] flex justify-center items-center h-[40px] rounded-2xl bg-accent dark:bg-dark-accent bg-opacity-80 backdrop-blur-md hover:cursor-pointer'
+										className='w-[56px] flex justify-center items-center h-[40px] rounded-2xl bg-accent dark:bg-dark-accent bg-opacity-80 backdrop-blur-md hover:cursor-pointer'
 									>
 										<svg
 											width='24'
