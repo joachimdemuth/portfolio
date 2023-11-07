@@ -156,6 +156,7 @@ useEffect(() => {
 									className='relative w-full h-full aspect-square object-cover rounded-[2px]'
 									fill
 									src={images[currentImage]}
+									alt={post.title}
 								/>
 							)}
 </div>
@@ -227,8 +228,8 @@ useEffect(() => {
 
 					{shuffleArray([...projectData])
 						.slice(0, 4)
-						.map((project) => (
-							<a href={`/project/${project.slug}`} className="flex w-full" >
+						.map((project, index) => (
+							<a key={index} href={`/project/${project.slug}`} className="flex w-full" >
 
 							<motion.div 
 
