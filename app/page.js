@@ -1,5 +1,5 @@
 'use client';
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import ProjectItem from './_components/projectItem';
 import Footer from './_components/footer';
 import projectData from './_utils/project.json';
@@ -15,21 +15,14 @@ export default function Home() {
 				<Name />
 				<div className='flex w-full bg-accent dark:bg-dark-accent h-[1px]'></div>
 				<Navbar />
-				<div className='relative grid md:grid-cols-2 lg:grid-cols-4 w-full justify-between gap-6 gap-y-10'>
-			
+				<div className='relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full justify-between gap-6 gap-y-10'>
 					{projectData.map((project) => (
-						<Link
-						key={project.id}
-						className='flex flex-grow'
-						href={`/project/${project.slug}`}
-						>
-							
+						<Link key={project.id} href={`/project/${project.slug}`}>
 							<ProjectItem key={project.id} project={project} />
 						</Link>
 					))}
 				</div>
 			</div>
-			
 
 			<Footer />
 		</div>

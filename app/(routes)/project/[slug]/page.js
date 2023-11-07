@@ -16,18 +16,22 @@ export default function Page({ params }) {
 	const [hasMounted, setHasMounted] = useState(false);
 	const [projects, setProjects] = useState([]);
 
+
 	useEffect(() => {
 		const foundPost = projectData.find(
 			(project) => project.slug === params.slug,
 		);
 		setPost(foundPost);
 		setImages(foundPost.imageUrls);
+
 	}, [params.slug]);
 
 	useEffect(() => {
-		const shuffledProjects = shuffleArray([...projectData]).slice(0, 4);
+		const shuffledProjects = shuffleArray([...projectData])
+			.filter(project => project.id !== post?.id)
+			.slice(0, 4);
 		setProjects(shuffledProjects);
-	}, []);
+	}, [post]);
 
 	useEffect(() => {
 		setHasMounted(true);
