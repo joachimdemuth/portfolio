@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-
+import Image from 'next/image';
 
 const itemVariants = {
 	hidden: {
