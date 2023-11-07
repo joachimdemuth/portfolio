@@ -65,7 +65,7 @@
 		"platforms": ["Figma", "Framer", "React"],
 		"url": "https://www.agoprene.com",
 		"coverImage": "/assets/agoprene/cover.jpg",
-		"imageUrls": ["/assets/agoprene/ago_1.png","/assets/agoprene/ago_2.jpg", "/assets/agoprene/ago_web.png"]
+		"imageUrls": ["/assets/agoprene/ago_1.png","/assets/agoprene/ago_2.jpg", "/assets/agoprene/ago_web.jpg"]
 	},
 	{
 		"id": "5",

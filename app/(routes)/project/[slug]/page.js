@@ -9,29 +9,30 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-
-
 export default function Page({ params }) {
 	const [post, setPost] = useState(null);
 	const [images, setImages] = useState(null);
 	const [currentImage, setCurrentImage] = useState(0);
-const [hasMounted, setHasMounted] = useState(false);
+	const [hasMounted, setHasMounted] = useState(false);
+	const [projects, setProjects] = useState([]);
 
-
-
-useEffect(() => {
-	const foundPost = projectData.find(
-		(project) => project.slug === params.slug,
+	useEffect(() => {
+		const foundPost = projectData.find(
+			(project) => project.slug === params.slug,
 		);
 		setPost(foundPost);
 		setImages(foundPost.imageUrls);
 	}, [params.slug]);
-	
-	useEffect(() => {
 
+	useEffect(() => {
+		const shuffledProjects = shuffleArray([...projectData]).slice(0, 4);
+		setProjects(shuffledProjects);
+	}, []);
+
+	useEffect(() => {
 		setHasMounted(true);
 	}, []);
-	
+
 	if (!hasMounted) {
 		return null;
 	}
@@ -140,26 +141,26 @@ useEffect(() => {
 					</div>
 					{post && images && (
 						<div className='flex flex-col w-full lg:w-1/2'>
-						<div className='relative flex w-full aspect-square  overflow-visible'>
-							{images[currentImage].includes('.mp4') ? (
-								<video
-									className='relative w-full h-full aspect-square object-cover rounded-[2px]'
-									src={images[currentImage]}
-									autoPlay
-									loop
-									muted
-									controls
-									// controlsList='nodownload'
-								></video>
-							) : (
-								<Image
-									className='relative w-full h-full aspect-square object-cover rounded-[2px]'
-									fill
-									src={images[currentImage]}
-									alt={post.title}
-								/>
-							)}
-</div>
+							<div className='relative flex w-full aspect-square  overflow-visible'>
+								{images[currentImage].includes('.mp4') ? (
+									<video
+										className='relative w-full h-full aspect-square object-cover rounded-[2px]'
+										src={images[currentImage]}
+										autoPlay
+										loop
+										muted
+										controls
+										// controlsList='nodownload'
+									></video>
+								) : (
+									<Image
+										className='relative w-full h-full aspect-square object-cover rounded-[2px]'
+										fill
+										src={images[currentImage]}
+										alt={post.title}
+									/>
+								)}
+							</div>
 							{images.length > 1 && (
 								<div
 									className={`flex relative w-full py-4 ${
@@ -222,35 +223,37 @@ useEffect(() => {
 				</div>
 				<div className='flex flex-col w-full justify-between gap-6 '>
 					<div className='flex'>
-					<h2 className='font-display text-accent dark:text-dark-accent text-2xl md:text-xl font-bold'>Other projects</h2>
+						<h2 className='font-display text-accent dark:text-dark-accent text-2xl md:text-xl font-bold'>
+							Other projects
+						</h2>
 					</div>
 					<div className='flex w-full flex-col justify-between items-start gap-6 md:flex-row'>
-
-					{shuffleArray([...projectData])
-						.slice(0, 4)
-						.map((project, index) => (
-							<a key={index} href={`/project/${project.slug}`} className="flex w-full" >
-
-							<motion.div 
-
-key={project.id}
-whileHover={{ y: -10 }}
-className='flex w-full flex-col font-display text-sm pb-10 gap-2 cursor-pointer'>
-								<div className='flex justify-start object-cover items-start relative w-full aspect-square h-auto rounded-[10px] overflow-clip'>
-									<Image
-										src={project.coverImage}
-										fill
-										
-										alt={project.title}
-										/>
-								</div>
-								<p className='text-accent dark:text-dark-accent'>
-									{project.title}
-								</p>
-							</motion.div>
-										</a>
-						))}
-						</div>
+						{projects &&
+							projects.map((project, index) => (
+								<a
+									key={index}
+									href={`/project/${project.slug}`}
+									className='flex w-full'
+								>
+									<motion.div
+										key={project.id}
+										whileHover={{ y: -10 }}
+										className='flex w-full flex-col font-display text-sm pb-10 gap-2 cursor-pointer'
+									>
+										<div className='flex justify-start object-cover items-start relative w-full aspect-square h-auto rounded-[10px] overflow-clip'>
+											<Image
+												src={project.coverImage}
+												fill
+												alt={project.title}
+											/>
+										</div>
+										<p className='text-accent dark:text-dark-accent'>
+											{project.title}
+										</p>
+									</motion.div>
+								</a>
+							))}
+					</div>
 				</div>
 			</div>
 			<Footer />
