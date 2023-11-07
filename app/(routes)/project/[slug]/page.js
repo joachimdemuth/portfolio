@@ -59,8 +59,8 @@ useEffect(() => {
 
 				<Navbar />
 
-				<div className='flex w-full bg-footer dark:bg-dark-footer md:p-6 rounded-[10px] gap-6 flex-col-reverse md:flex-row mb-12'>
-					<div className='flex w-full md:w-1/2 max-sm:px-4 pb-4'>
+				<div className='flex w-full bg-footer dark:bg-dark-footer p-4 sm:p-6 rounded-[10px] gap-6 flex-col-reverse lg:flex-row mb-12'>
+					<div className='flex w-full lg:w-1/2  pb-4'>
 						{post && (
 							<div className='flex w-full flex-col md:pb-12'>
 								<div className='flex w-full flex-col font-display text-sm pb-10 gap-2'>
@@ -139,10 +139,11 @@ useEffect(() => {
 						)}
 					</div>
 					{post && images && (
-						<div className='flex-col relative  flex w-full md:w-1/2 overflow-visible'>
+						<div className='flex flex-col w-full lg:w-1/2'>
+						<div className='relative flex w-full aspect-square  overflow-visible'>
 							{images[currentImage].includes('.mp4') ? (
 								<video
-									className='relative w-full h-full aspect-square object-contain rounded-[2px]'
+									className='relative w-full h-full aspect-square object-cover rounded-[2px]'
 									src={images[currentImage]}
 									autoPlay
 									loop
@@ -151,15 +152,16 @@ useEffect(() => {
 									// controlsList='nodownload'
 								></video>
 							) : (
-								<img
+								<Image
 									className='relative w-full h-full aspect-square object-cover rounded-[2px]'
+									fill
 									src={images[currentImage]}
 								/>
 							)}
-
+</div>
 							{images.length > 1 && (
 								<div
-									className={`flex w-full py-4 max-sm:px-4 ${
+									className={`flex relative w-full py-4 ${
 										images.length > 1 ? 'justify-between' : 'justify-center'
 									}  items-center overflow-visible`}
 								>
