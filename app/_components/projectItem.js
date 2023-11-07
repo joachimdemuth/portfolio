@@ -49,7 +49,7 @@ const ProjectItem = (props) => {
 				className={`flex bg-project-item-bg rounded-xl  hover:bg-opacity-90  dark:bg-dark-project-item-bg  group relative  justify-center items-center aspect-square  overflow-hidden  `}
 			>
 				<div className='relative flex justify-center '>
-					<img className='object-fill' src={image} alt='placeholder image' />
+					<Image className='object-cover' fill src={image} alt='placeholder image' />
 				</div>
 			</motion.div>
 			<div className='flex w-full flex-row justify-between font-text text-sm gap-1 leading-4 '>
