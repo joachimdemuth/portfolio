@@ -30,8 +30,7 @@ export default function RootLayout({ children }) {
 				></div>
 				{<ThemeProvider>{children}</ThemeProvider>}
 				<Analytics />
-			<Script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="djhest" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. You can now buy me a coffee." data-color="#FF6B00" data-position="Right" data-x_margin="18" data-y_margin="18"></Script>
-			</body>
+				<script defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="joachimdemuth" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting!" data-color="#FF6B00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>			</body>
 		</html>
 	);
 }
