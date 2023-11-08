@@ -148,7 +148,7 @@ export default function Page({ params }) {
 							<div className='relative flex w-full aspect-square  overflow-visible'>
 								{images[currentImage].includes('.mp4') ? (
 									<video
-										className='relative w-full h-full aspect-square object-cover rounded-[2px]'
+										className='relative w-full h-full object-contain rounded-[2px]'
 										src={images[currentImage]}
 										autoPlay
 										loop
