@@ -141,7 +141,7 @@
 		"platforms": ["Figma", "Mit Telenor", "iOS"],
 		"url": "",
 		"coverImage": "/assets/telenor_np/cover.jpg",
-		"imageUrls": ["/assets/telenor_np/cover.png"]
+		"imageUrls": ["/assets/telenor_np/cover.png", "/assets/telenor_np/video.mp4"]
 	},
 	{
 		"id": "11",
