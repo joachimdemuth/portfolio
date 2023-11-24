@@ -49,7 +49,7 @@ const imageVariant = {
 };
 
 export default function SpotifyPlayer() {
-	const [hover, setHover] = useState(true);
+	const [hover, setHover] = useState(false);
 	const [data, setData] = useState(null);
 	const [width, setWidth] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(false);
