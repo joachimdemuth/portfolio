@@ -242,7 +242,7 @@ export default function About() {
 									</motion.p>
 								</a>
 								<a
-									href='https://x.com/poetenpoul'
+									href='https://x.com/joachimdemuth'
 									target='_blank'
 									rel='noopener noreferrer'
 								>
@@ -250,7 +250,7 @@ export default function About() {
 										whileHover={{ x: 5 }}
 										className='text-sm text-secondary-text dark:text-dark-secondary-text hover:text-accent dark:hover:text-dark-accent hover:cursor-pointer'
 									>
-										X @poetenpoul
+										X @joachimdemuth
 									</motion.p>
 								</a>
 							</div>

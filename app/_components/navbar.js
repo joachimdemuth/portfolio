@@ -5,6 +5,9 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion, AnimatePresence, useCycle } from 'framer-motion';
 
+import SpotifyPlayer from './spotifyPlayer';
+
+
 const mobileMenuVariants = {
 	hidden: {
 		width: 0,
@@ -154,6 +157,7 @@ export default function Navbar() {
 							<p className='text-accent'>Accent</p>
 							<div className='w-2 h-2 rounded-full bg-accent border-[1px] border-grey'></div>
 						</div> */}
+						<SpotifyPlayer />
 					</div>
 
 					<div
