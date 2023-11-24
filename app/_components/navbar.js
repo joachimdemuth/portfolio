@@ -145,8 +145,8 @@ export default function Navbar() {
 							<Link href='/'>Work</Link>
 						</div>
 					</div>
-					<div className='md:flex md:flex-1 hidden text-secondary-text dark:text-dark-secondary-text '>
-						<div className='flex flex-1 gap-1 items-center'>
+					<div className='md:flex md:justify-between md:flex-1 hidden text-secondary-text dark:text-dark-secondary-text '>
+						<div className='flex justify-start gap-1 items-start'>
 							<p>Dark mode</p>
 							<Switch />
 						</div>

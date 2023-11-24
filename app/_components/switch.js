@@ -21,7 +21,7 @@ const Switch = () => {
 				isOn ? 'bg-accent' : 'bg-tertiary-text'
 			} w-5 h-3 border ${
 				isOn ? 'justify-end' : 'justify-start'
-			} p-[1px] items-center rounded-full cursor-pointer`}
+			} p-[1px] items-center rounded-full cursor-pointer mt-[2px]`}
 		>
 			<div 
 			className={`flex w-2 h-2 bg-footer rounded-full transition-all duration-200 ease-out`}></div>
