@@ -19,7 +19,7 @@ export async function GET(request) {
 	console.log(res.status);
 	if (res.ok) {
 		const data = await res.json();
-		console.log(data);
+		// console.log(data);
 		return NextResponse.json(data);
 	} else {
 		console.log('error');

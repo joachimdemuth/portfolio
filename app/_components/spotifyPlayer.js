@@ -117,7 +117,7 @@ export default function SpotifyPlayer() {
 					
 				>
 					<p
-						className='marquee-text overflow-ellipsis animate-[marquee_5s_linear_infinite] text-accent dark:text-[#ffd08b]'
+						className='marquee-text animate-[marquee_10s_linear_infinite] text-accent dark:text-[#ffd08b]'
 						style={{
 							textShadow:
 								'4px 0px 12.399999618530273px rgba(255, 138, 0, 0.79)',
@@ -126,7 +126,7 @@ export default function SpotifyPlayer() {
 						{data.item.artists[0].name} - {data.item.name}
 					</p>
 					<p
-						className='marquee-text overflow-ellipsis animate-[marquee_5s_linear_infinite] text-accent dark:text-[#ffd08b] '
+						className='marquee-text animate-[marquee_10s_linear_infinite] text-accent dark:text-[#ffd08b] '
 						aria-hidden='true'
 	
 						style={{
