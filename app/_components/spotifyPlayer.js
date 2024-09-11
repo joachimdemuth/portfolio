@@ -95,12 +95,12 @@ export default function SpotifyPlayer() {
 		data.is_playing && (
 			<div
 				id='player'
-				className='flex rounded-lg relative gap px-2 flex-row gap-2 h-8 max-w-[200px] xl:max-w-[300px] items-center bg-project-item-bg dark:bg-primary-text whitespace-nowrap shadow-inner justify-start select-none'
+				className='flex gap-2 rounded-lg relative flex-row h-8 max-w-[200px] xl:max-w-[300px] items-center bg-project-item-bg dark:bg-primary-text whitespace-nowrap shadow-inner justify-start select-none'
 				style={{ boxShadow: '0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset' }}
 				onMouseEnter={() => handleMouseEnter()}
 				onMouseLeave={() => handleMouseLeave()}
 			>
-				<div className='flex aspect-square justify-center items-center w-5 h-5'>
+				<div className='flex z-10 rounded-l-lg absolute top-0 left-0 p-1 bg-project-item-bg dark:bg-primary-text items-center justify-center aspect-square min-w-6 min-h-6'>
 
 				<motion.img
 					variants={imageVariant}
@@ -108,12 +108,12 @@ export default function SpotifyPlayer() {
 					initial='hidden'
 					exit='exit'
 					src={data.item.album.images[0].url}
-					className='rounded-full aspect-square w-5'
+					className='rounded-full w-6 h-6 aspect-square'
 					/>
 					</div>
 
 				<div
-					className='flex py-2 flex-row overflow-clip marquee gap-4'
+					className='flex py-2 flex-row overflow-hidden marquee gap-4'
 					
 				>
 					<p
